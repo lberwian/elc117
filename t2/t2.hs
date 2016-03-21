@@ -32,4 +32,3 @@ charFound c str = length (filter(==c)str) > 0
 --Ele faz uma varredura na lista ou string até se deparar com a condição determinada e escreve numa lista ou numa string.
 
 
---Deixei para última hora e as outras duas não deu tempo =[
