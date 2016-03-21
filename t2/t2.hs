@@ -29,6 +29,7 @@ numPar n = filter even n
 charFound :: Char -> String -> Bool
 charFound c str = length (filter(==c)str) > 0
 --11
---Ele faz uma varredura na lista ou string até se deparar com a condição determinada e escreve numa lista ou numa string.
+--Ele faz uma varredura na lista ou string até se deparar com a condição determinada e escreve numa lista ou numa string 
+--o que vem antes (prefixo)
 
 
