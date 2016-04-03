@@ -38,9 +38,13 @@ applyStyles (s:ss) (x:xs) = (x,s):applyStyles (ss++(s:[])) xs
 -- Combina (zip) a lista de estilos com a lista de retangulos, aplicando os estilos ciclicamente.
 --applyStyles styles rects = zip rects (cycle styles)
 
---Gera cores para os retangulos de acordo com o valores RGB da lista de tuplas [(Int,Int,Int)]. OBS: Qualquer valor Int é aceito, mas o range de cores R,G e B é de 0 a 255
-styles ::  [(Int,Int,Int)] -> [String]
-styles (x:xs) = ["fill:rgb"++ (show x),"fill:rgb"++(show xs)] 
+--Gera cores para os retangulos de acordo com o valores RGB da lista de tuplas [(Int,Int,Int)], O tom das cores muda n vezes somando shift sobre os valores RGB. OBS: Qualquer valor Int é aceito, mas o range de cores R,G e B é de 0 a 255
+styles ::  Int -> Int -> [(Int,Int,Int)] -> [String]
+styles _ 0 _ = []
+styles shift n (x:xs) = ["fill:rgb"++(show x),"fill:rgb"++(show xs)]++[]++ styles shift (n-1) (map (shiftTupleRGB shift)(x:xs)) 
+--Shift na tupla RGB
+shiftTupleRGB :: Int -> (Int,Int,Int) -> (Int, Int, Int)
+shiftTupleRGB n (a,b,c) = (a+n,b+n,c+n)
 {--
      O codigo abaixo gera um arquivo "mycolors.svg".
      A geracao usa 2 listas: uma com coordenadas dos retangulos e outra com as cores.
@@ -51,5 +55,5 @@ main = do
   let
    rects = genRects 10 50 50                          -- Deve gerar 10 retangulos de 50x50
    -- styles = ["fill:rgb(140,0,0)","fill:rgb(0,140,0)"] -- Estilo: vermelho e verde
-   rectstyles = applyStyles (styles [(50,3,900),(1,135,100)]) rects --  OBS: Qualquer valor Int é aceito, mas o range de cores R,G e B é de 0 a 255 em styles.
+   rectstyles = applyStyles (styles 0 10 [(50,3,900),(1,135,100)]) rects --  OBS: Qualquer valor Int é aceito, mas o range de cores R,G e B é de 0 a 255 em styles.
   writeFile "mycolors.svg" (writeAllRects maxWidth maxHeight rectstyles)
