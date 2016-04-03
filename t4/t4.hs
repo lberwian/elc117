@@ -32,6 +32,7 @@ genRects n w h = [((((n*w)-w),0.0),w,h)] ++ (genRects (n-1) w h)
 
 -- Se houverem mais retangulos que cores, havera retangulos com cores repetidas. -- Se houverem menos retangulos que cores, algumas cores nao serao usadas.
 applyStyles :: [String] -> [Rect] -> [(Rect,String)] 
+applyStyles [] _ = [] --Styles onde n=0
 applyStyles _ [] = []
 applyStyles (s:ss) (x:xs) = (x,s):applyStyles (ss++(s:[])) xs
 
@@ -55,5 +56,5 @@ main = do
   let
    rects = genRects 10 50 50                          -- Deve gerar 10 retangulos de 50x50
    -- styles = ["fill:rgb(140,0,0)","fill:rgb(0,140,0)"] -- Estilo: vermelho e verde
-   rectstyles = applyStyles (styles 0 10 [(50,3,900),(1,135,100)]) rects --  OBS: Qualquer valor Int é aceito, mas o range de cores R,G e B é de 0 a 255 em styles.
+   rectstyles = applyStyles (styles 0 0 [(140,0,0),(0,140,0)]) rects --  OBS: Qualquer valor Int é aceito, mas o range de cores R,G e B é de 0 a 255 em styles.
   writeFile "mycolors.svg" (writeAllRects maxWidth maxHeight rectstyles)
