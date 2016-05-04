@@ -294,11 +294,11 @@ mais cedo que Júlia pode nadar é em:
 (D)quinto lugar
 (E)sexto lugar
 
-?- revezamento(C),regraMaisCedoQue(silva,julia,C),regraMaisCedoPossivel(C,julia,3).
-?- revezamento(C),regraMaisCedoQue(silva,julia,C),regraMaisCedoPossivel(C,julia,4).
-?- revezamento(C),regraMaisCedoQue(silva,julia,C),regraMaisCedoPossivel(C,julia,5).
-?- revezamento(C),regraMaisCedoQue(silva,julia,C),regraMaisCedoPossivel(C,julia,6).
-?- revezamento(C),regraMaisCedoQue(silva,julia,C),regraMaisCedoPossivel(C,julia,7).
+?- revezamento(C),regraMaisCedoQue(silvia,julia,C),regraMaisCedoPossivel(C,julia,3).
+?- revezamento(C),regraMaisCedoQue(silvia,julia,C),regraMaisCedoPossivel(C,julia,4).
+?- revezamento(C),regraMaisCedoQue(silvia,julia,C),regraMaisCedoPossivel(C,julia,5).
+?- revezamento(C),regraMaisCedoQue(silvia,julia,C),regraMaisCedoPossivel(C,julia,6).
+?- revezamento(C),regraMaisCedoQue(silvia,julia,C),regraMaisCedoPossivel(C,julia,7).
 
 
 */
