@@ -1,3 +1,0 @@
-
-
-Primeira impressão da GUI, incompleta estrutura de arquivos para o MVC, é possivel fazer buscas de usuários pela RestAPI
