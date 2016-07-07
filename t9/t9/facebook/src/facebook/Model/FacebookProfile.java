@@ -10,7 +10,7 @@ public class FacebookProfile {
         private final String ID;
         private final String NOME;
         private final ImageIcon Foto;
-        private int row;
+        private final int row;
         
         public void FacebookProfile(){}
         
