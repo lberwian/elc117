@@ -51,7 +51,7 @@ Total runtime: 0:00:000.356818 |
 Total runtime: 0:00:000.355729 |
 Total runtime: 0:00:000.355991 |
 <code>Arquitetura:           x86_64<code>
-Modo(s) operacional da CPU:32-bit, 64-bit
+<code>Modo(s) operacional da CPU:32-bit, 64-bit<code>
 Ordem dos bytes:       Little Endian
 CPU(s):                8
 Lista de CPU(s) on-line:0-7
@@ -73,4 +73,4 @@ cache de L1d:          32K
 cache de L1i:          32K
 cache de L2:           256K
 cache de L3:           12288K
-CPU(s) de nó0 NUMA:   0-7<code>
+CPU(s) de nó0 NUMA:   0-7
