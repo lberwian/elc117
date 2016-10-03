@@ -50,7 +50,7 @@ Total runtime: 0:00:000.356052 |
 Total runtime: 0:00:000.356818 |
 Total runtime: 0:00:000.355729 |
 Total runtime: 0:00:000.355991 |
-<code>Arquitetura:           x86_64
+<code>Arquitetura:           x86_64<code>
 Modo(s) operacional da CPU:32-bit, 64-bit
 Ordem dos bytes:       Little Endian
 CPU(s):                8
